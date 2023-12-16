@@ -14,7 +14,7 @@ app.use('/',require('./routes/comments'))
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello test World!')
 })
 
 app.listen(5000)
