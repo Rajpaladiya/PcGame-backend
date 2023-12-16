@@ -3,9 +3,9 @@ const mongoURI = 'mongodb://127.0.0.1:27017/game'
 
 
 
-const MongoToConnect=()=>{
-    mongoose.connect(mongoURI)
-}
+// const MongoToConnect=()=>{
+//     mongoose.connect(mongoURI)
+// }
 
 const connectToMongoDB = async () => {
     try {
