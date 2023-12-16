@@ -1,5 +1,6 @@
 const { connect } = require("mongoose");
 const MongoToConnect = require("./db");
+const Game = require('../models/PRODUCT')
 const cors = require('cors')
 MongoToConnect(); 
 
@@ -18,6 +19,7 @@ app.get('/FetchGame', async(req, resp) => {
         const games =  await Game.find()
         resp.json(games)
         console.log(games)
+        resp.send(games)
     } catch (error) {
         console.error(error.message);
         resp.status(500).send("internal Server Error")
