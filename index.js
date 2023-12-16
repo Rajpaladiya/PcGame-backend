@@ -1,8 +1,8 @@
 const { connect } = require("mongoose");
 const MongoToConnect = require("./db");
-const Game = require('../models/PRODUCT')
+const Game = require('./models/PRODUCT');
 const cors = require('cors')
-MongoToConnect(); 
+MongoToConnect();
 
 const express = require('express')
 const app = express()
@@ -17,7 +17,7 @@ app.get('/FetchGame', async(req, resp) => {
 
     try {
         const games =  await Game.find()
-        resp.json(games)
+        // resp.json(games)
         console.log(games)
         resp.send(games)
     } catch (error) {
