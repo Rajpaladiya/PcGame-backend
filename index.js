@@ -13,13 +13,12 @@ app.use(express.json())
 // app.use('/',require('./routes/product'))
 app.use('/',require('./routes/comments'))
 
-app.get('/FetchGame', async(req, resp) => {
-
+app.get('/FetchGame', (req, resp) => {
     try {
-        const games =  await Game.find()
+        const games = Game.find()
         // resp.json(games)
         console.log(games)
-        resp.send(games)
+        // resp.send(games)
     } catch (error) {
         console.error(error.message);
         resp.status(500).send("internal Server Error")
