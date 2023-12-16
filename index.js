@@ -27,6 +27,8 @@ app.get('/FetchGame', (req, resp) => {
 
 
 app.get('/', (req, res) => {
+  const games = Game.find()
+  console.log(games)
   res.send('Hello World!')
 })
 
